@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const logosPresentacion = [
       { src: './assets/img/ediciones-veladas/velada-i.webp', alt: 'La Velada Del Año', title: 'La Velada Del Año I' },
       { src: './assets/img/ediciones-veladas/velada-ii.webp', alt: 'La Velada Del Año 2', title: 'La Velada Del Año II' },
-      { src: './assets/img/ediciones-veladas/velada-iii.webp', alt: 'La Velada Del Año 3', title: 'La Velada Del Año III' },
+      { src: './assets/img/ediciones-veladas/velada-iIi.webp', alt: 'La Velada Del Año 3', title: 'La Velada Del Año III' },
       { src: './assets/img/ediciones-veladas/velada-iv.webp', alt: 'La Velada Del Año 4', title: 'La Velada Del Año IV' },
       { src: './assets/img/la-velada-del-anho-v.webp', alt: 'La Velada Del Año 5', title: 'La Velada Del Año V' }
     ];
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
         nombre: "Velada III",
-        imagen: "./assets/img/ediciones-veladas/velada-iii.webp",
+        imagen: "./assets/img/ediciones-veladas/velada-iIi.webp",
         fecha: "1 de julio 2023",
         lugar: "Cívitas Metropolitano, Madrid",
         vistas: "+3.4 millones en directo",
@@ -1569,7 +1569,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       // VELADA III
       {
-        velada: './assets/img/ediciones-veladas/velada-iii.webp',
+        velada: './assets/img/ediciones-veladas/velada-iIi.webp',
         combatePrincipal: {
           enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-iii/pelea-principal.webp',
           ganador: './assets/img/peleadores/coscu/coscu.webp'
