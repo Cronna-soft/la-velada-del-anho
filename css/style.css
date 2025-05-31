@@ -175,40 +175,6 @@ html {
 }
 
 .icon-kick { width: 20px; margin-bottom: 4px; }
-
-/*-------------------PRECARGAR PÁGINA---------------------*/
-
-.preloader {
-	position: fixed;
-	z-index: 999;
-	background-color: var(--fondoColor);
-	top: 0; left: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: opacity 0.5s ease;
-}
-.espera-imagen {
-	width: 500px;
-	height: 500px;
-	background: url("../assets/img/la-velada-del-anho-v.webp") no-repeat center;
-	background-size: contain;
-	animation: imagenEspera 1s infinite;
-}
-@keyframes imagenEspera {
-	0%, 100% { transform: translateX(0);}
-	50% { transform: translateX(15px); }
-}
-.preloader-text {
-	color: white;
-	font-family: var(--texto);
-	font-size: 1.2rem;
-	margin-top: 1rem;
-}
-
 /*-------------------------------------------------------------------*/
 
 /*MOVIL*/
