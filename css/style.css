@@ -166,11 +166,23 @@ html {
 	font-size: 1.3rem;
 	background: var(--gradientSecundario);
 	border-radius: 100%;
+	transition: all 1s ease;
 	& i {
 		color: white;
 	}
 	&:hover {
 		background: var(--gradientPrincipal);
+	}
+}
+
+.btn-close-modal {
+	width: 1em;
+	height: 1em;
+	border: 0;
+	border-radius: .5rem;
+	background: transparent;
+	& i {
+		color: white;
 	}
 }
 
@@ -415,9 +427,6 @@ html {
 	width: 100%;
 }
 
-/*=======================================================*/
-/*SECCION MEJORES MOMENTOS*/
-
 /*======================================================*/
 /*SECCION PELEADORES*/
 .peleadores-body {
@@ -654,7 +663,8 @@ div .peleadores-modal {
 
 .enfrentamientos-item.tabs {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	background-color: var(--fondoColor);
 }
 
 .tabs .tab-item {
@@ -668,7 +678,15 @@ div .peleadores-modal {
 	cursor: pointer;
 	@media screen and (max-width: 355px) { height: 80px; }
 	@media (min-width: 356px) and (max-width: 385px) { height: 90px; }
-	@media (min-width: 386px) and (max-width: 425px) { height: 99px; }
+	@media (min-width: 386px) and (max-width: 480px) { height: 100px; }
+
+	&:first-child {
+		border-radius: 10px 0 0 0;
+	}
+
+	&:last-child {
+		border-radius: 0 10px 0 0;
+	}
 }
 
 .enfrentamientos-item.tab-content {
@@ -686,7 +704,14 @@ div .peleadores-modal {
 .tabs .enfrentamiento-active {
 	color: var(--fondoColor);
 	background: var(--colorSecundario);
-	border-radius: 10px 10px 0 0;
+
+	&:first-child {
+		border-radius: 10px 0 0 0;
+	}
+
+	&:last-child {
+		border-radius: 0 10px 0 0;
+	}
 }
 
 .enfrentamiento-principal {

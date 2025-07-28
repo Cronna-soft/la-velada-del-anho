@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para agregar y duplicar los logos
     function cintaTransportadoraPresentacion() {
-      const totalLogosPresentacion = [...logosPresentacion, ...logosPresentacion, ...logosPresentacion];
+      const totalLogosPresentacion = [...logosPresentacion, ...logosPresentacion];
 
       totalLogosPresentacion.forEach(logo => {
         const imgPresentacion = document.createElement('div');
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         presentacionCinta.appendChild(imgPresentacion);
       });
     }
+  
   /*--------------------------------------------------------------------------------*/
   //=======================*SECCION*=*=*EDICIONES*==========================//
     /*TARJETAS DE EVENTOS*/
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fecha: "1 de julio 2023",
         lugar: "Cívitas Metropolitano, Madrid",
         vistas: "+3.4 millones en directo",
-        extra: "Lleno total del estadio"
+        extra: "Llenó total del estadio"
       },
       {
         nombre: "Velada IV",
@@ -62,7 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
         fecha: "13 de julio 2024",
         lugar: "Nuevo Bernabéu",
         vistas: "+4.2 millones en directo",
-        extra: "La más vista hasta la fecha"
+        extra: "Primer evento con dinámicas especiales"
+      },
+      {
+        nombre: "Velada V",
+        imagen: "./assets/img/la-velada-del-anho-v.webp",
+        fecha: "26 de julio 2025",
+        lugar: "Estadio La Cartuja, Sevilla",
+        vistas: "+8 millones en directo",
+        extra: "Nuevo record de audencia"
       }
     ];
 
@@ -122,1257 +131,1250 @@ document.addEventListener('DOMContentLoaded', () => {
         imgPatrocinador.innerHTML = `
           ${logo.svg}
         `
-        // imgPatrocinador.src = logo.src;
-        // imgPatrocinador.alt = logo.title + " " + logo.alt;
-        // imgPatrocinador.title = logo.title;
+        
         imgPatrocinador.classList.add('item-cinta-ediciones');
-        // imgPatrocinador.style.cursor = 'pointer'
         edicionCinta.appendChild(imgPatrocinador);
       });
     }
-
-
-  /*--------------------------------------------------------------------------------*/
-  //==============*SECCION*=**=*MEJORES*=**=*MOMENTOS*================//
 
   /*--------------------------------------------------------------------------------*/
   //==============*SECCION*=**=*PELEADORES*================//
 
     // Lista de peleadores
     const peleadoresListado = [
-    /*VELADA I*/
-      { 
-        nombre: 'Reven', 
-        foto: './assets/img/peleadores/reven/reven.webp',
-        edicion: 1,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/reven/reven.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.82,
-          peso: 75,
-          alcance: 185,
-          edad: 31,
-          combates: 1
+      /*VELADA I*/
+        { 
+          nombre: 'Reven', 
+          foto: './assets/img/peleadores/reven/reven.webp',
+          edicion: 1,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/reven/reven.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.82,
+            peso: 75,
+            alcance: 185,
+            edad: 31,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@RevenLOL/',
+            instagram: 'https://instagram.com/RevenPedruski/',
+            twitch: 'https://www.twitch.tv/ReventXz',
+            twitter: 'https://x.com/Reventxz',
+            tiktok: 'https://www.youtube.com/watch?v=f_WuRfuMXQw'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@RevenLOL/',
-          instagram: 'https://instagram.com/RevenPedruski/',
-          twitch: 'https://www.twitch.tv/ReventXz',
-          twitter: 'https://x.com/Reventxz',
-          tiktok: 'https://www.youtube.com/watch?v=f_WuRfuMXQw'
-        }
-      },
-      { 
-        nombre: 'ElMillor', 
-        foto: './assets/img/peleadores/elmillor/elmillor.webp',
-        edicion: 1,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/elmillor/elmillor.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.80,
-          peso: 80,
-          alcance: 183,
-          edad: 30,
-          combates: 1
+        { 
+          nombre: 'ElMillor', 
+          foto: './assets/img/peleadores/elmillor/elmillor.webp',
+          edicion: 1,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/elmillor/elmillor.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.80,
+            peso: 80,
+            alcance: 183,
+            edad: 30,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@NewElmilloR/',
+            instagram: 'https://www.instagram.com/elmiillor/',
+            twitter: 'https://x.com/Elmiillor',
+            kick: 'https://kick.com/elmiillor'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@NewElmilloR/',
-          instagram: 'https://www.instagram.com/elmiillor/',
-          twitter: 'https://x.com/Elmiillor',
-          kick: 'https://kick.com/elmiillor'
-        }
-      },
-      { 
-        nombre: 'Mr. Jagger', 
-        foto: './assets/img/peleadores/mrjagger/mrjagger.webp',
-        edicion: 1,
-        totalCinturones: 2,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/mrjagger/mrjagger.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.87,
-          peso: 82,
-          alcance: 193,
-          edad: 30,
-          combates: 2
+        { 
+          nombre: 'Mr. Jagger', 
+          foto: './assets/img/peleadores/mrjagger/mrjagger.webp',
+          edicion: 1,
+          totalCinturones: 2,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/mrjagger/mrjagger.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.87,
+            peso: 82,
+            alcance: 193,
+            edad: 30,
+            combates: 2
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@themisterjagger',
+            instagram: 'https://www.instagram.com/mister_jagger',
+            twitch: 'https://www.twitch.tv/jaggerprincesa',
+            twitter: 'https://x.com/MisterJagger_'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@themisterjagger',
-          instagram: 'https://www.instagram.com/mister_jagger',
-          twitch: 'https://www.twitch.tv/jaggerprincesa',
-          twitter: 'https://x.com/MisterJagger_'
-        }
-      },
-      { 
-        nombre: 'Viruzz', 
-        foto: './assets/img/peleadores/viruzz/viruzz.webp',
-        edicion: 1,
-        totalCinturones: 2,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/viruzz/viruzz.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.82,
-          peso: 84.7,
-          alcance: 185,
-          edad: 33,
-          combates: 4
+        { 
+          nombre: 'Viruzz', 
+          foto: './assets/img/peleadores/viruzz/viruzz.webp',
+          edicion: 1,
+          totalCinturones: 3,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/viruzz/viruzz.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.82,
+            peso: 84.7,
+            alcance: 185,
+            edad: 33,
+            combates: 4
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/user/byViruZz',
+            instagram: 'https://instagram.com/victormelida',
+            twitter: 'https://www.youtube.com/watch?v=f_WuRfuMXQw',
+            tiktok: 'https://www.tiktok.com/@victormelida'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/user/byViruZz',
-          instagram: 'https://instagram.com/victormelida',
-          twitter: 'https://www.youtube.com/watch?v=f_WuRfuMXQw',
-          tiktok: 'https://www.tiktok.com/@victormelida'
-        }
-      },
-      { 
-        nombre: 'Future', 
-        foto: './assets/img/peleadores/future/future.webp',
-        edicion: 1,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/future/future.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.86,
-          peso: 83.6,
-          alcance: 190,
-          edad: 33,
-          combates: 1
+        { 
+          nombre: 'Future', 
+          foto: './assets/img/peleadores/future/future.webp',
+          edicion: 1,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/future/future.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.86,
+            peso: 83.6,
+            alcance: 190,
+            edad: 33,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@FTREFORMED1',
+            instagram: 'https://www.instagram.com/ftreformed/',
+            twitch: 'https://www.twitch.tv/ftreformed',
+            twitter: 'https://x.com/FTREFORMED'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@FTREFORMED1',
-          instagram: 'https://www.instagram.com/ftreformed/',
-          twitch: 'https://www.twitch.tv/ftreformed',
-          twitter: 'https://x.com/FTREFORMED'
-        }
-      },
-      { 
-        nombre: 'Torete', 
-        foto: './assets/img/peleadores/torete/torete1.webp',
-        edicion: 1,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/torete/torete2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.70,
-          peso: 75.6,
-          alcance: 173,
-          edad: 35,
-          combates: 1
+        { 
+          nombre: 'Torete', 
+          foto: './assets/img/peleadores/torete/torete1.webp',
+          edicion: 1,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/torete/torete2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.70,
+            peso: 75.6,
+            alcance: 173,
+            edad: 35,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Thetoretegg1',
+            instagram: 'https://www.instagram.com/toretevidal/',
+            twitter: 'https://x.com/Thetoretegg'
+          }
+        },  
+      /*VELADA II*/
+        { 
+          nombre: 'David Bustamante', 
+          foto: './assets/img/peleadores/davidbustamante/davidbustamante2.webp',
+          edicion: 2,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/davidbustamante/davidbustamante1.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.76,
+            peso: 75,
+            alcance: 175,
+            edad: 43,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/user/BustamanteVEVO',
+            instagram: 'https://www.instagram.com/davibusta/',
+            twitter: 'https://x.com/David_Busta',
+            tiktok: 'https://www.tiktok.com/@bustamanteofficial'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Thetoretegg1',
-          instagram: 'https://www.instagram.com/toretevidal/',
-          twitter: 'https://x.com/Thetoretegg'
-        }
-      },  
-    /*VELADA II*/
-      { 
-        nombre: 'David Bustamante', 
-        foto: './assets/img/peleadores/davidbustamante/davidbustamante2.webp',
-        edicion: 2,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/davidbustamante/davidbustamante1.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.76,
-          peso: 75,
-          alcance: 175,
-          edad: 43,
-          combates: 1
+        { 
+          nombre: 'Lolito Fdez', 
+          foto: './assets/img/peleadores/lolito/lolito1.webp',
+          edicion: 2,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/lolito/lolito2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.74,
+            peso: 100,
+            alcance: 176,
+            edad: 35,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.tiktok.com/@luzutiktok',
+            instagram: 'https://www.instagram.com/lowlito/',
+            twitch: 'https://www.twitch.tv/lolitofdez',
+            twitter: 'https://x.com/LOLiTOFDEZ',
+            tiktok: 'https://www.tiktok.com/@lolitofdez'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/user/BustamanteVEVO',
-          instagram: 'https://www.instagram.com/davibusta/',
-          twitter: 'https://x.com/David_Busta',
-          tiktok: 'https://www.tiktok.com/@bustamanteofficial'
-        }
-      },
-      { 
-        nombre: 'Lolito Fdez', 
-        foto: './assets/img/peleadores/lolito/lolito1.webp',
-        edicion: 2,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/lolito/lolito2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.74,
-          peso: 100,
-          alcance: 176,
-          edad: 35,
-          combates: 1
+        { 
+          nombre: 'Luzu', 
+          foto: './assets/img/peleadores/luzu/luzu1.webp',
+          edicion: 2,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/luzu/luzu2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.78,
+            peso: 80,
+            alcance: 180,
+            edad: 40,
+            combates: 2
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@luzugames',
+            instagram: 'https://www.instagram.com/luzu/',
+            twitch: 'https://www.twitch.tv/luzu',
+            twitter: 'https://x.com/LuzuGames',
+            tiktok: 'https://www.tiktok.com/@luzutiktok'
+          }
         },
-        redes: {
-          youtube: 'https://www.tiktok.com/@luzutiktok',
-          instagram: 'https://www.instagram.com/lowlito/',
-          twitch: 'https://www.twitch.tv/lolitofdez',
-          twitter: 'https://x.com/LOLiTOFDEZ',
-          tiktok: 'https://www.tiktok.com/@lolitofdez'
-        }
-      },
-      { 
-        nombre: 'Luzu', 
-        foto: './assets/img/peleadores/luzu/luzu1.webp',
-        edicion: 2,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/luzu/luzu2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.78,
-          peso: 80,
-          alcance: 180,
-          edad: 40,
-          combates: 2
+        { 
+          nombre: 'Momo', 
+          foto: './assets/img/peleadores/momo/momo2.webp',
+          edicion: 2,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/momo/momo1.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.70,
+            peso: 80,
+            alcance: 173,
+            edad: 30,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/momoladinastia',
+            instagram: 'https://www.instagram.com/gero.momo/',
+            kick: 'https://kick.com/momoladinastia',
+            twitter: 'https://x.com/momorelojero'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@luzugames',
-          instagram: 'https://www.instagram.com/luzu/',
-          twitch: 'https://www.twitch.tv/luzu',
-          twitter: 'https://x.com/LuzuGames',
-          tiktok: 'https://www.tiktok.com/@luzutiktok'
-        }
-      },
-      { 
-        nombre: 'Momo', 
-        foto: './assets/img/peleadores/momo/momo2.webp',
-        edicion: 2,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/momo/momo1.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.70,
-          peso: 80,
-          alcance: 173,
-          edad: 30,
-          combates: 1
+        { 
+          nombre: 'Ari Gameplays', 
+          foto: './assets/img/peleadores/arigameplay/arigameplay.webp',
+          edicion: 2,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/arigameplay/arigameplay.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.57,
+            peso: 60.9,
+            alcance: 160,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@AriGameplays',
+            instagram: 'https://www.instagram.com/arigameplays/',
+            twitch: 'https://www.twitch.tv/arigameplays',
+            twitter: 'https://x.com/arigameplays',
+            tiktok: 'https://www.tiktok.com/@arigameplays'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/momoladinastia',
-          instagram: 'https://www.instagram.com/gero.momo/',
-          kick: 'https://kick.com/momoladinastia',
-          twitter: 'https://x.com/momorelojero'
-        }
-      },
-      { 
-        nombre: 'Ari Gameplays', 
-        foto: './assets/img/peleadores/arigameplay/arigameplay.webp',
-        edicion: 2,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/arigameplay/arigameplay.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.57,
-          peso: 60.9,
-          alcance: 160,
-          edad: 27,
-          combates: 1
+        { 
+          nombre: 'Paracetamor', 
+          foto: './assets/img/peleadores/paracetamor/paracetamor1.webp',
+          edicion: 2,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/paracetamor/paracetamor2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.63,
+            peso: 64,
+            alcance: 166,
+            edad: 28,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Paracetamor',
+            instagram: 'https://www.instagram.com/_paracetamor',
+            twitch: 'https://www.twitch.tv/paracetamor',
+            twitter: 'https://x.com/paracetamor',
+            tiktok: 'https://www.tiktok.com/@paracetamor'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@AriGameplays',
-          instagram: 'https://www.instagram.com/arigameplays/',
-          twitch: 'https://www.twitch.tv/arigameplays',
-          twitter: 'https://x.com/arigameplays',
-          tiktok: 'https://www.tiktok.com/@arigameplays'
-        }
-      },
-      { 
-        nombre: 'Paracetamor', 
-        foto: './assets/img/peleadores/paracetamor/paracetamor1.webp',
-        edicion: 2,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/paracetamor/paracetamor2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.63,
-          peso: 64,
-          alcance: 166,
-          edad: 28,
-          combates: 1
+        { 
+          nombre: 'Spursito', 
+          foto: './assets/img/peleadores/spursito/spursito.webp',
+          edicion: 2,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/spursito/spursito.webp',
+            pais: 'Andorra',
+            paisBandera: './assets/img/banderas/andorra.webp',
+            altura: 1.72,
+            peso: 68,
+            alcance: 175,
+            edad: 28,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Spursito',
+            instagram: 'https://www.instagram.com/martimiras/',
+            twitch: 'https://www.twitch.tv/spursito',
+            tiktok: 'https://www.tiktok.com/@spursitoelite',
+            twitter: 'https://x.com/Spursito'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Paracetamor',
-          instagram: 'https://www.instagram.com/_paracetamor',
-          twitch: 'https://www.twitch.tv/paracetamor',
-          twitter: 'https://x.com/paracetamor',
-          tiktok: 'https://www.tiktok.com/@paracetamor'
-        }
-      },
-      { 
-        nombre: 'Spursito', 
-        foto: './assets/img/peleadores/spursito/spursito.webp',
-        edicion: 2,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/spursito/spursito.webp',
-          pais: 'Andorra',
-          paisBandera: './assets/img/banderas/andorra.webp',
-          altura: 1.72,
-          peso: 68,
-          alcance: 175,
-          edad: 28,
-          combates: 1
+        { 
+          nombre: 'Carola', 
+          foto: './assets/img/peleadores/carola/carola.webp',
+          edicion: 2,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/carola/carola.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.74,
+            peso: 69,
+            alcance: 176,
+            edad: 29,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@carola2183',
+            instagram: 'https://www.instagram.com/thecarolos',
+            twitch: 'https://www.twitch.tv/carola',
+            twitter: 'https://x.com/TheCarolos'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Spursito',
-          instagram: 'https://www.instagram.com/martimiras/',
-          twitch: 'https://www.twitch.tv/spursito',
-          tiktok: 'https://www.tiktok.com/@spursitoelite',
-          twitter: 'https://x.com/Spursito'
-        }
-      },
-      { 
-        nombre: 'Carola', 
-        foto: './assets/img/peleadores/carola/carola.webp',
-        edicion: 2,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/carola/carola.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.74,
-          peso: 69,
-          alcance: 176,
-          edad: 29,
-          combates: 1
+      /*VELADA III*/
+        { 
+          nombre: 'Coscu', 
+          foto: './assets/img/peleadores/coscu/coscu.webp',
+          edicion: 3,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/coscu/coscu.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.80,
+            peso: 80,
+            alcance: 183,
+            edad: 34,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Coscu',
+            instagram: 'https://www.instagram.com/martinpdisalvo',
+            kick: 'https://kick.com/coscu',
+            twitter: 'https://x.com/Martinpdisalvo',
+            tiktok: 'https://www.tiktok.com/@adictoalvegetal'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@carola2183',
-          instagram: 'https://www.instagram.com/thecarolos',
-          twitch: 'https://www.twitch.tv/carola',
-          twitter: 'https://x.com/TheCarolos'
-        }
-      },
-    /*VELADA III*/
-      { 
-        nombre: 'Coscu', 
-        foto: './assets/img/peleadores/coscu/coscu.webp',
-        edicion: 3,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/coscu/coscu.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.80,
-          peso: 80,
-          alcance: 183,
-          edad: 34,
-          combates: 1
+        { 
+          nombre: 'Germán Garmendia', 
+          foto: './assets/img/peleadores/germangarmendia/germangarmendia1.webp',
+          edicion: 3,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/germangarmendia/germangarmendia2.webp',
+            pais: 'Chile',
+            paisBandera: './assets/img/banderas/chile.webp',
+            altura: 1.83,
+            peso: 85,
+            alcance: 185,
+            edad: 35,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/user/JuegaGerman',
+            instagram: 'https://www.instagram.com/germangarmendia/',
+            twitch: 'https://www.twitch.tv/germangarmendia',
+            twitter: 'https://x.com/GermanGarmendia',
+            tiktok: 'https://www.tiktok.com/@germangarmendia'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Coscu',
-          instagram: 'https://www.instagram.com/martinpdisalvo',
-          kick: 'https://kick.com/coscu',
-          twitter: 'https://x.com/Martinpdisalvo',
-          tiktok: 'https://www.tiktok.com/@adictoalvegetal'
-        }
-      },
-      { 
-        nombre: 'Germán Garmendia', 
-        foto: './assets/img/peleadores/germangarmendia/germangarmendia1.webp',
-        edicion: 3,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/germangarmendia/germangarmendia2.webp',
-          pais: 'Chile',
-          paisBandera: './assets/img/banderas/chile.webp',
-          altura: 1.83,
-          peso: 85,
-          alcance: 185,
-          edad: 35,
-          combates: 1
+        { 
+          nombre: 'Mayichi', 
+          foto: './assets/img/peleadores/mayichi/mayichi1.webp',
+          edicion: 3,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/mayichi/mayichi2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.61,
+            peso: 55,
+            alcance: 164,
+            edad: 33,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Mayichi',
+            instagram: 'https://www.instagram.com/mayichiii/',
+            twitter: 'https://x.com/mayichii',
+            twitch: 'https://www.twitch.tv/mayichi',
+            tiktok: 'https://www.tiktok.com/@mayichiii'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/user/JuegaGerman',
-          instagram: 'https://www.instagram.com/germangarmendia/',
-          twitch: 'https://www.twitch.tv/germangarmendia',
-          twitter: 'https://x.com/GermanGarmendia',
-          tiktok: 'https://www.tiktok.com/@germangarmendia'
-        }
-      },
-      { 
-        nombre: 'Mayichi', 
-        foto: './assets/img/peleadores/mayichi/mayichi1.webp',
-        edicion: 3,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/mayichi/mayichi2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.61,
-          peso: 55,
-          alcance: 164,
-          edad: 33,
-          combates: 1
+        { 
+          nombre: 'Shelao', 
+          foto: './assets/img/peleadores/shelao/shelao.webp',
+          edicion: 3,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/shelao/shelao.webp',
+            pais: 'Chile',
+            paisBandera: './assets/img/banderas/chile.webp',
+            altura: 1.85,
+            peso: 95,
+            alcance: 190,
+            edad: 35,
+            combates: 2
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Shelao',
+            instagram: 'https://www.instagram.com/crissalva40/',
+            tiktok: 'https://www.tiktok.com/@shelao',
+            kick: 'https://kick.com/shelao'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Mayichi',
-          instagram: 'https://www.instagram.com/mayichiii/',
-          twitter: 'https://x.com/mayichii',
-          twitch: 'https://www.twitch.tv/mayichi',
-          tiktok: 'https://www.tiktok.com/@mayichiii'
-        }
-      },
-      { 
-        nombre: 'Shelao', 
-        foto: './assets/img/peleadores/shelao/shelao.webp',
-        edicion: 3,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/shelao/shelao.webp',
-          pais: 'Chile',
-          paisBandera: './assets/img/banderas/chile.webp',
-          altura: 1.85,
-          peso: 95,
-          alcance: 190,
-          edad: 35,
-          combates: 2
+        { 
+          nombre: 'Misho', 
+          foto: './assets/img/peleadores/misho/misho.webp',
+          edicion: 3,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/misho/misho.webp',
+            pais: 'Bulgaria',
+            paisBandera: './assets/img/banderas/bulgaria.webp',
+            altura: 1.95,
+            peso: 100,
+            alcance: 203,
+            edad: 34,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@MishoAmoli',
+            instagram: 'https://www.instagram.com/mishoamoli',
+            twitter: 'https://x.com/MishoAmoli',
+            twitch: 'https://www.twitch.tv/mishoamoli',
+            tiktok: 'https://www.tiktok.com/@mishoamoli',
+            kick: 'https://kick.com/mishoamoli'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Shelao',
-          instagram: 'https://www.instagram.com/crissalva40/',
-          tiktok: 'https://www.tiktok.com/@shelao',
-          kick: 'https://kick.com/shelao'
-        }
-      },
-      { 
-        nombre: 'Misho', 
-        foto: './assets/img/peleadores/misho/misho.webp',
-        edicion: 3,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/misho/misho.webp',
-          pais: 'Bulgaria',
-          paisBandera: './assets/img/banderas/bulgaria.webp',
-          altura: 1.95,
-          peso: 100,
-          alcance: 203,
-          edad: 34,
-          combates: 1
+        { 
+          nombre: 'Fernanfloo', 
+          foto: './assets/img/peleadores/fernanfloo/fernanfloo.webp',
+          edicion: 3,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/fernanfloo/fernanfloo.webp',
+            pais: 'Salvador',
+            paisBandera: './assets/img/banderas/salvador.webp',
+            altura: 1.87,
+            peso: 69,
+            alcance: 193,
+            edad: 32,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/user/Fernanfloo',
+            instagram: 'https://www.instagram.com/fernanfloo',
+            twitter: 'https://x.com/Fernanfloo',
+            twitch: 'https://www.twitch.tv/fernanfloo',
+            tiktok: 'https://www.tiktok.com/@fernanfloo'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@MishoAmoli',
-          instagram: 'https://www.instagram.com/mishoamoli',
-          twitter: 'https://x.com/MishoAmoli',
-          twitch: 'https://www.twitch.tv/mishoamoli',
-          tiktok: 'https://www.tiktok.com/@mishoamoli',
-          kick: 'https://kick.com/mishoamoli'
-        }
-      },
-      { 
-        nombre: 'Fernanfloo', 
-        foto: './assets/img/peleadores/fernanfloo/fernanfloo.webp',
-        edicion: 3,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/fernanfloo/fernanfloo.webp',
-          pais: 'Salvador',
-          paisBandera: './assets/img/banderas/salvador.webp',
-          altura: 1.87,
-          peso: 69,
-          alcance: 193,
-          edad: 32,
-          combates: 1
+        { 
+          nombre: 'Rivers GG', 
+          foto: './assets/img/peleadores/riversgg/rivers1.webp',
+          edicion: 3,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/riversgg/rivers2.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.58,
+            peso: 51,
+            alcance: 160,
+            edad: 27,
+            combates: 2
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/Rivers_gg',
+            instagram: 'https://www.instagram.com/samyrivera/',
+            twitch: 'https://www.twitch.tv/rivers_gg',
+            twitter: 'https://x.com/samyriveratv',
+            tiktok: 'https://www.tiktok.com/@rivers.gg'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/user/Fernanfloo',
-          instagram: 'https://www.instagram.com/fernanfloo',
-          twitter: 'https://x.com/Fernanfloo',
-          twitch: 'https://www.twitch.tv/fernanfloo',
-          tiktok: 'https://www.tiktok.com/@fernanfloo'
-        }
-      },
-      { 
-        nombre: 'Rivers GG', 
-        foto: './assets/img/peleadores/riversgg/rivers1.webp',
-        edicion: 3,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/riversgg/rivers2.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.58,
-          peso: 51,
-          alcance: 160,
-          edad: 27,
-          combates: 2
+        { 
+          nombre: 'Marina Rivers', 
+          foto: './assets/img/peleadores/larivers/larivers1.webp',
+          edicion: 3,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/larivers/larivers2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.64,
+            peso: 59,
+            alcance: 167,
+            edad: 23,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Riverss',
+            instagram: 'https://www.instagram.com/_riverss_/',
+            twitter: 'https://www.tiktok.com/@_riverss_',
+            tiktok: 'https://www.tiktok.com/@_riverss_'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/Rivers_gg',
-          instagram: 'https://www.instagram.com/samyrivera/',
-          twitch: 'https://www.twitch.tv/rivers_gg',
-          twitter: 'https://x.com/samyriveratv',
-          tiktok: 'https://www.tiktok.com/@rivers.gg'
-        }
-      },
-      { 
-        nombre: 'Marina Rivers', 
-        foto: './assets/img/peleadores/larivers/larivers1.webp',
-        edicion: 3,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/larivers/larivers2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.64,
-          peso: 59,
-          alcance: 167,
-          edad: 23,
-          combates: 1
+        { 
+          nombre: 'Abraham Mateo', 
+          foto: './assets/img/peleadores/abrahammateo/abrahammateo1.webp',
+          edicion: 3,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/abrahammateo/abrahammateo2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.62,
+            peso: 61,
+            alcance: 164,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://music.youtube.com/channel/UCql3y41dHUh9JoPHMedvCbQ',
+            instagram: 'https://www.instagram.com/abrahammateo/',
+            twitter: 'https://x.com/AbrahamMateo',
+            tiktok: 'https://www.tiktok.com/@abrahammateo'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Riverss',
-          instagram: 'https://www.instagram.com/_riverss_/',
-          twitter: 'https://www.tiktok.com/@_riverss_',
-          tiktok: 'https://www.tiktok.com/@_riverss_'
-        }
-      },
-      { 
-        nombre: 'Abraham Mateo', 
-        foto: './assets/img/peleadores/abrahammateo/abrahammateo1.webp',
-        edicion: 3,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/abrahammateo/abrahammateo2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.62,
-          peso: 61,
-          alcance: 164,
-          edad: 27,
-          combates: 1
+        { 
+          nombre: 'Ampeter', 
+          foto: './assets/img/peleadores/ampeter/ampeter.webp',
+          edicion: 3,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/ampeter/ampeter.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.61,
+            peso: 58,
+            alcance: 163,
+            edad: 26,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/ampeterby7',
+            instagram: 'https://www.instagram.com/ampeter/',
+            twitch: 'https://www.twitch.tv/ampeterby7',
+            kick: 'https://kick.com/ampeterby7',
+            twitter: 'https://x.com/ampeterby7',
+            tiktok: 'https://www.tiktok.com/@ampeterby7'
+          }
         },
-        redes: {
-          youtube: 'https://music.youtube.com/channel/UCql3y41dHUh9JoPHMedvCbQ',
-          instagram: 'https://www.instagram.com/abrahammateo/',
-          twitter: 'https://x.com/AbrahamMateo',
-          tiktok: 'https://www.tiktok.com/@abrahammateo'
-        }
-      },
-      { 
-        nombre: 'Ampeter', 
-        foto: './assets/img/peleadores/ampeter/ampeter.webp',
-        edicion: 3,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/ampeter/ampeter.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.61,
-          peso: 58,
-          alcance: 163,
-          edad: 26,
-          combates: 1
+      /*VELADA IV*/
+        { 
+          nombre: 'YoSoyPlex', 
+          foto: './assets/img/peleadores/yosoyplex/yosoyplex.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/yosoyplex/yosoyplex.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.97,
+            peso: 82,
+            alcance: 200,
+            edad: 23,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@YoSoyPlex',
+            instagram: 'https://www.instagram.com/yosoyplex/',
+            twitter: 'https://x.com/yosoyplex',
+            tiktok: 'https://www.tiktok.com/@yosoyplexx'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/ampeterby7',
-          instagram: 'https://www.instagram.com/ampeter/',
-          twitch: 'https://www.twitch.tv/ampeterby7',
-          kick: 'https://kick.com/ampeterby7',
-          twitter: 'https://x.com/ampeterby7',
-          tiktok: 'https://www.tiktok.com/@ampeterby7'
-        }
-      },
-    /*VELADA IV*/
-      { 
-        nombre: 'YoSoyPlex', 
-        foto: './assets/img/peleadores/yosoyplex/yosoyplex.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/yosoyplex/yosoyplex.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.97,
-          peso: 82,
-          alcance: 200,
-          edad: 23,
-          combates: 1
+        { 
+          nombre: 'El Mariana', 
+          foto: './assets/img/peleadores/elmariana/elmariana2.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/elmariana/elmariana1.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.94,
+            peso: 87,
+            alcance: 198,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/ElMariana',
+            instagram: 'https://www.instagram.com/elmarianaa/',
+            twitter: 'https://x.com/elmarianaa',
+            twitch: 'https://www.twitch.tv/elmariana',
+            tiktok: 'https://www.tiktok.com/@elmarianaa'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@YoSoyPlex',
-          instagram: 'https://www.instagram.com/yosoyplex/',
-          twitter: 'https://x.com/yosoyplex',
-          tiktok: 'https://www.tiktok.com/@yosoyplexx'
-        }
-      },
-      { 
-        nombre: 'El Mariana', 
-        foto: './assets/img/peleadores/elmariana/elmariana2.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/elmariana/elmariana1.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.94,
-          peso: 87,
-          alcance: 198,
-          edad: 27,
-          combates: 1
+        { 
+          nombre: 'Folagor', 
+          foto: './assets/img/peleadores/folagor/folagor1.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/folagor/folagor2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.80,
+            peso: 73.7,
+            alcance: 183,
+            edad: 29,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Folagor03',
+            instagram: 'https://www.instagram.com/yoel__ramirez/',
+            twitter: 'https://x.com/FolagoR',
+            twitch: 'https://www.twitch.tv/folagorlives'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/ElMariana',
-          instagram: 'https://www.instagram.com/elmarianaa/',
-          twitter: 'https://x.com/elmarianaa',
-          twitch: 'https://www.twitch.tv/elmariana',
-          tiktok: 'https://www.tiktok.com/@elmarianaa'
-        }
-      },
-      { 
-        nombre: 'Folagor', 
-        foto: './assets/img/peleadores/folagor/folagor1.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/folagor/folagor2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.80,
-          peso: 73.7,
-          alcance: 183,
-          edad: 29,
-          combates: 1
+        { 
+          nombre: 'Pelicanger', 
+          foto: './assets/img/peleadores/pelicanger/pelicanger.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/pelicanger/pelicanger.webp',
+            pais: 'Colombia',
+            paisBandera: './assets/img/banderas/colombia.webp',
+            altura: 1.91,
+            peso: 89.5,
+            alcance: 194,
+            edad: 23,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/c/pelicanger',
+            instagram: 'https://www.instagram.com/pelicanger__',
+            twitter: 'https://x.com/offpeli',
+            kick: 'https://kick.com/pelicanger',
+            twitch: 'https://www.twitch.tv/pelicanger/'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Folagor03',
-          instagram: 'https://www.instagram.com/yoel__ramirez/',
-          twitter: 'https://x.com/FolagoR',
-          twitch: 'https://www.twitch.tv/folagorlives'
-        }
-      },
-      { 
-        nombre: 'Pelicanger', 
-        foto: './assets/img/peleadores/pelicanger/pelicanger.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/pelicanger/pelicanger.webp',
-          pais: 'Colombia',
-          paisBandera: './assets/img/banderas/colombia.webp',
-          altura: 1.91,
-          peso: 89.5,
-          alcance: 194,
-          edad: 23,
-          combates: 1
+        { 
+          nombre: 'RobertoCein', 
+          foto: './assets/img/peleadores/robertocein/robertocein.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/robertocein/robertocein.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.69,
+            peso: 69.3,
+            alcance: 172,
+            edad: 25,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCt8RJDArdFmULfqNENimQvw',
+            instagram: 'https://www.instagram.com/robertocein',
+            twitter: 'https://x.com/Roberto_Cein',
+            twitch: 'https://www.twitch.tv/robertocein',
+            tiktok: ''
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/c/pelicanger',
-          instagram: 'https://www.instagram.com/pelicanger__',
-          twitter: 'https://x.com/offpeli',
-          kick: 'https://kick.com/pelicanger',
-          twitch: 'https://www.twitch.tv/pelicanger/'
-        }
-      },
-      { 
-        nombre: 'RobertoCein', 
-        foto: './assets/img/peleadores/robertocein/robertocein.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/robertocein/robertocein.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.69,
-          peso: 69.3,
-          alcance: 172,
-          edad: 25,
-          combates: 1
+        { 
+          nombre: 'Sezar Blue', 
+          foto: './assets/img/peleadores/sezarblue/sezarblue.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/sezarblue/sezarblue.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.77,
+            peso: 80,
+            alcance: 180,
+            edad: 50,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/SEZARBLUE',
+            instagram: 'https://www.instagram.com/sezarblue/',
+            tiktok: 'https://www.tiktok.com/@sezar_blue_'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCt8RJDArdFmULfqNENimQvw',
-          instagram: 'https://www.instagram.com/robertocein',
-          twitter: 'https://x.com/Roberto_Cein',
-          twitch: 'https://www.twitch.tv/robertocein',
-          tiktok: ''
-        }
-      },
-      { 
-        nombre: 'Sezar Blue', 
-        foto: './assets/img/peleadores/sezarblue/sezarblue.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/sezarblue/sezarblue.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.77,
-          peso: 80,
-          alcance: 180,
-          edad: 50,
-          combates: 1
+        { 
+          nombre: 'Unicornio', 
+          foto: './assets/img/peleadores/unicornio/unicornio1.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/unicornio/unicornio2.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.75,
+            peso: 80,
+            alcance: 178,
+            edad: 25,
+            combates: 1
+          },
+          redes: {
+            kick: 'https://kick.com/unicornio',
+            instagram: 'https://www.instagram.com/germanusinger/',
+            twitter: 'https://x.com/GermanUsinger',
+            youtube: 'https://www.youtube.com/c/gertwo',
+            tiktok: 'https://www.tiktok.com/@german.usinger'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/SEZARBLUE',
-          instagram: 'https://www.instagram.com/sezarblue/',
-          tiktok: 'https://www.tiktok.com/@sezar_blue_'
-        }
-      },
-      { 
-        nombre: 'Unicornio', 
-        foto: './assets/img/peleadores/unicornio/unicornio1.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/unicornio/unicornio2.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.75,
-          peso: 80,
-          alcance: 178,
-          edad: 25,
-          combates: 1
+        { 
+          nombre: 'Skain', 
+          foto: './assets/img/peleadores/skain/skain2.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/skain/skain1.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.83,
+            peso: 72.8,
+            alcance: 186,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCBxWceO2t_WJnu9YzN1qwHA',
+            instagram: 'https://www.instagram.com/skain24',
+            twitter: 'https://x.com/skain24',
+            twitch: 'https://www.twitch.tv/skain',
+            tiktok: 'https://www.tiktok.com/@skain24'
+          }
         },
-        redes: {
-          kick: 'https://kick.com/unicornio',
-          instagram: 'https://www.instagram.com/germanusinger/',
-          twitter: 'https://x.com/GermanUsinger',
-          youtube: 'https://www.youtube.com/c/gertwo',
-          tiktok: 'https://www.tiktok.com/@german.usinger'
-        }
-      },
-      { 
-        nombre: 'Skain', 
-        foto: './assets/img/peleadores/skain/skain2.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/skain/skain1.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.83,
-          peso: 72.8,
-          alcance: 186,
-          edad: 27,
-          combates: 1
+        { 
+          nombre: 'Aldo Geo', 
+          foto: './assets/img/peleadores/aldogeo/aldogeo2.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/aldogeo/aldogeo1.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.79,
+            peso: 78.5,
+            alcance: 182,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/c/aldogeo',
+            instagram: 'https://www.instagram.com/_aldogeo_',
+            twitter: 'https://x.com/aldogeotv',
+            twitch: 'https://www.twitch.tv/aldo_geo'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCBxWceO2t_WJnu9YzN1qwHA',
-          instagram: 'https://www.instagram.com/skain24',
-          twitter: 'https://x.com/skain24',
-          twitch: 'https://www.twitch.tv/skain',
-          tiktok: 'https://www.tiktok.com/@skain24'
-        }
-      },
-      { 
-        nombre: 'Aldo Geo', 
-        foto: './assets/img/peleadores/aldogeo/aldogeo2.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/aldogeo/aldogeo1.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.79,
-          peso: 78.5,
-          alcance: 182,
-          edad: 27,
-          combates: 1
+        { 
+          nombre: 'Peldanyos', 
+          foto: './assets/img/peleadores/peldanyos/peldanyos.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/peldanyos/peldanyos.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.91,
+            peso: 86.5,
+            alcance: 193,
+            edad: 26,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@peldanyos',
+            instagram: 'https://www.instagram.com/peldanyos',
+            tiktok: 'https://www.tiktok.com/@peldanyos'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/c/aldogeo',
-          instagram: 'https://www.instagram.com/_aldogeo_',
-          twitter: 'https://x.com/aldogeotv',
-          twitch: 'https://www.twitch.tv/aldo_geo'
-        }
-      },
-      { 
-        nombre: 'Peldanyos', 
-        foto: './assets/img/peleadores/peldanyos/peldanyos.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/peldanyos/peldanyos.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.91,
-          peso: 86.5,
-          alcance: 193,
-          edad: 26,
-          combates: 1
+        { 
+          nombre: 'Karchez', 
+          foto: './assets/img/peleadores/karchez/karchez1.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/karchez/karchez2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.84,
+            peso: 79.3,
+            alcance: 187,
+            edad: 23,
+            combates: 1
+          },
+          redes: {
+            instagram: 'https://www.instagram.com/karchezz',
+            twitter: 'https://x.com/karchezzz',
+            twitch: 'https://www.twitch.tv/karchez'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@peldanyos',
-          instagram: 'https://www.instagram.com/peldanyos',
-          tiktok: 'https://www.tiktok.com/@peldanyos'
-        }
-      },
-      { 
-        nombre: 'Karchez', 
-        foto: './assets/img/peleadores/karchez/karchez1.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/karchez/karchez2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.84,
-          peso: 79.3,
-          alcance: 187,
-          edad: 23,
-          combates: 1
+        { 
+          nombre: 'Amablitz', 
+          foto: './assets/img/peleadores/amablitz/amablitz2.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/amablitz/amablitz1.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.58,
+            peso: 60.6,
+            alcance: 161,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@amablitz',
+            instagram: 'https://www.instagram.com/amablitz/',
+            twitter: 'https://x.com/amablitz',
+            twitch: 'https://www.twitch.tv/amablitz',
+            tiktok: 'https://www.tiktok.com/@amablitz'
+          }
         },
-        redes: {
-          instagram: 'https://www.instagram.com/karchezz',
-          twitter: 'https://x.com/karchezzz',
-          twitch: 'https://www.twitch.tv/karchez'
-        }
-      },
-      { 
-        nombre: 'Amablitz', 
-        foto: './assets/img/peleadores/amablitz/amablitz2.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/amablitz/amablitz1.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.58,
-          peso: 60.6,
-          alcance: 161,
-          edad: 27,
-          combates: 1
+        { 
+          nombre: 'Nissaxter', 
+          foto: './assets/img/peleadores/nissaxter/nissaxter.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/nissaxter/nissaxter.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.70,
+            peso: 56,
+            alcance: 173,
+            edad: 29,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Nissaxter',
+            instagram: 'https://www.instagram.com/nissaxter',
+            twitter: 'https://x.com/nissaxter',
+            twitch: 'https://www.twitch.tv/nissaxter',
+            tiktok: 'https://www.tiktok.com/@nissaxter_'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@amablitz',
-          instagram: 'https://www.instagram.com/amablitz/',
-          twitter: 'https://x.com/amablitz',
-          twitch: 'https://www.twitch.tv/amablitz',
-          tiktok: 'https://www.tiktok.com/@amablitz'
-        }
-      },
-      { 
-        nombre: 'Nissaxter', 
-        foto: './assets/img/peleadores/nissaxter/nissaxter.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/nissaxter/nissaxter.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.70,
-          peso: 56,
-          alcance: 173,
-          edad: 29,
-          combates: 1
+        { 
+          nombre: 'Alana', 
+          foto: './assets/img/peleadores/alana/alana2.webp',
+          edicion: 4,
+          totalCinturones: 2,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/alana/alana1.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.56,
+            peso: 51,
+            alcance: 159,
+            edad: 25,
+            combates: 2
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@alanafloresf',
+            instagram: 'https://www.instagram.com/alanafloresf',
+            twitter: 'https://x.com/alanaupdate',
+            twitch: 'https://m.twitch.tv/alanalarana',
+            tiktok: 'https://www.tiktok.com/@alanafloresf'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Nissaxter',
-          instagram: 'https://www.instagram.com/nissaxter',
-          twitter: 'https://x.com/nissaxter',
-          twitch: 'https://www.twitch.tv/nissaxter',
-          tiktok: 'https://www.tiktok.com/@nissaxter_'
-        }
-      },
-      { 
-        nombre: 'Alana', 
-        foto: './assets/img/peleadores/alana/alana2.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/alana/alana1.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.56,
-          peso: 51,
-          alcance: 159,
-          edad: 25,
-          combates: 2
+        { 
+          nombre: 'Zeling', 
+          foto: './assets/img/peleadores/zeling/zeling.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/zeling/zeling.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.77,
+            peso: 63,
+            alcance: 180,
+            edad: 28,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCTfejVE5het7QO8WCY7yIQA',
+            instagram: 'https://www.instagram.com/zeiing',
+            twitter: 'https://x.com/ZeIing',
+            twitch: 'https://www.twitch.tv/zeling'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@alanafloresf',
-          instagram: 'https://www.instagram.com/alanafloresf',
-          twitter: 'https://x.com/alanaupdate',
-          twitch: 'https://m.twitch.tv/alanalarana',
-          tiktok: 'https://www.tiktok.com/@alanafloresf'
-        }
-      },
-      { 
-        nombre: 'Zeling', 
-        foto: './assets/img/peleadores/zeling/zeling.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/zeling/zeling.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.77,
-          peso: 63,
-          alcance: 180,
-          edad: 28,
-          combates: 1
+        { 
+          nombre: 'La Cobra', 
+          foto: './assets/img/peleadores/cobra/cobra1.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/cobra/cobra2.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.75,
+            peso: 70,
+            alcance: 177,
+            edad: 28,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCCfPkh8osJPC2pPq283kKXg',
+            instagram: 'https://www.instagram.com/lautarodelcampo/',
+            twitter: 'https://x.com/lautarodeIcampo',
+            kick: 'https://kick.com/lacobraaa',
+            tiktok: 'https://www.tiktok.com/@lacobraaa.9'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCTfejVE5het7QO8WCY7yIQA',
-          instagram: 'https://www.instagram.com/zeiing',
-          twitter: 'https://x.com/ZeIing',
-          twitch: 'https://www.twitch.tv/zeling'
-        }
-      },
-      { 
-        nombre: 'La Cobra', 
-        foto: './assets/img/peleadores/cobra/cobra1.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/cobra/cobra2.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.75,
-          peso: 70,
-          alcance: 177,
-          edad: 28,
-          combates: 1
+        { 
+          nombre: 'Guanyar', 
+          foto: './assets/img/peleadores/guanyar/guanyar1.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/guanyar/guanyar2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.75,
+            peso: 70,
+            alcance: 177,
+            edad: 26,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/GUANYAR',
+            instagram: 'https://www.instagram.com/guanyarr',
+            twitter: 'https://x.com/Guanyarr',
+            twitch: 'https://www.twitch.tv/guanyar',
+            tiktok: 'https://www.tiktok.com/@guanyar'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCCfPkh8osJPC2pPq283kKXg',
-          instagram: 'https://www.instagram.com/lautarodelcampo/',
-          twitter: 'https://x.com/lautarodeIcampo',
-          kick: 'https://kick.com/lacobraaa',
-          tiktok: 'https://www.tiktok.com/@lacobraaa.9'
-        }
-      },
-      { 
-        nombre: 'Guanyar', 
-        foto: './assets/img/peleadores/guanyar/guanyar1.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/guanyar/guanyar2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.75,
-          peso: 70,
-          alcance: 177,
-          edad: 26,
-          combates: 1
+        { 
+          nombre: 'Agustin51', 
+          foto: './assets/img/peleadores/agustin51/agustin51.webp',
+          edicion: 4,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/agustin51/agustin51.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.70,
+            peso: 60,
+            alcance: 173,
+            edad: 25,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Agustin5111',
+            instagram: 'https://www.instagram.com/imagus51/',
+            twitter: 'https://x.com/ImAgus51',
+            twitch: 'https://www.twitch.tv/agustin51'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/GUANYAR',
-          instagram: 'https://www.instagram.com/guanyarr',
-          twitter: 'https://x.com/Guanyarr',
-          twitch: 'https://www.twitch.tv/guanyar',
-          tiktok: 'https://www.tiktok.com/@guanyar'
-        }
-      },
-      { 
-        nombre: 'Agustin51', 
-        foto: './assets/img/peleadores/agustin51/agustin51.webp',
-        edicion: 4,
-        totalCinturones: 1,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/agustin51/agustin51.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.70,
-          peso: 60,
-          alcance: 173,
-          edad: 25,
-          combates: 1
+        { 
+          nombre: 'Carreraaa', 
+          foto: './assets/img/peleadores/carreraaa/carreraaa1.webp',
+          edicion: 4,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/carreraaa/carreraaa2.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.65,
+            peso: 60,
+            alcance: 167,
+            edad: 25,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/carreraaa',
+            instagram: 'https://www.instagram.com/rodricarreraaa/',
+            twitter: 'https://x.com/rodricarreraaa',
+            kick: 'https://kick.com/carre',
+            tiktok: ''
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@Agustin5111',
-          instagram: 'https://www.instagram.com/imagus51/',
-          twitter: 'https://x.com/ImAgus51',
-          twitch: 'https://www.twitch.tv/agustin51'
-        }
-      },
-      { 
-        nombre: 'Carreraaa', 
-        foto: './assets/img/peleadores/carreraaa/carreraaa1.webp',
-        edicion: 4,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/carreraaa/carreraaa2.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.65,
-          peso: 60,
-          alcance: 167,
-          edad: 25,
-          combates: 1
+      /*VELADA V*/
+        { 
+          nombre: 'WestCOL', 
+          foto: './assets/img/peleadores/westcol/westcol.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/westcol/westcol.webp',
+            pais: 'Colombia',
+            paisBandera: './assets/img/banderas/colombia.webp',
+            altura: 1.65,
+            peso: 63,
+            alcance: 168,
+            edad: 24,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCEg_iK8FKwZfpRMn4-AnnnQ',
+            instagram: 'https://www.instagram.com/westcol',
+            twitter: 'https://x.com/WestCOL',
+            kick: 'https://kick.com/westcol',
+            tiktok: 'https://www.tiktok.com/@westcol'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/carreraaa',
-          instagram: 'https://www.instagram.com/rodricarreraaa/',
-          twitter: 'https://x.com/rodricarreraaa',
-          kick: 'https://kick.com/carre',
-          tiktok: ''
-        }
-      },
-    /*VELADA V*/
-      { 
-        nombre: 'WestCOL', 
-        foto: './assets/img/peleadores/westcol/westcol.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/westcol/westcol.webp',
-          pais: 'Colombia',
-          paisBandera: './assets/img/banderas/colombia.webp',
-          altura: 1.65,
-          peso: 63,
-          alcance: 168,
-          edad: 24,
-          combates: 1
+        { 
+          nombre: 'TheGrefg', 
+          foto: './assets/img/peleadores/grefg/grefg2.webp',
+          edicion: 5,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/grefg/grefg1.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.79,
+            peso: 74,
+            alcance: 182,
+            edad: 28,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCCEmjNPpJYhGDgaEqeeA4HA',
+            instagram: 'https://www.instagram.com/thegrefg',
+            twitter: 'https://www.instagram.com/thegrefg',
+            twitch: 'https://www.twitch.tv/thegrefg',
+            tiktok: 'https://www.tiktok.com/@thegrefg'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCEg_iK8FKwZfpRMn4-AnnnQ',
-          instagram: 'https://www.instagram.com/westcol',
-          twitter: 'https://x.com/WestCOL',
-          kick: 'https://kick.com/westcol',
-          tiktok: 'https://www.tiktok.com/@westcol'
-        }
-      },
-      { 
-        nombre: 'TheGrefg', 
-        foto: './assets/img/peleadores/grefg/grefg2.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/grefg/grefg1.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.79,
-          peso: 74,
-          alcance: 182,
-          edad: 28,
-          combates: 1
+        { 
+          nombre: 'Tomás Mazza', 
+          foto: './assets/img/peleadores/tomasmazza/tomasmazza1.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/tomasmazza/tomasmazza2.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.76,
+            peso: 84,
+            alcance: 179,
+            edad: 25,
+            combates: 1
+          },
+          redes: {
+            kick: 'https://kick.com/mazzatomas',
+            instagram: 'https://www.instagram.com/mazzatomas/',
+            twitter: 'https://x.com/MazzaTomas',
+            tiktok: 'https://www.tiktok.com/@mazzatomas'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCCEmjNPpJYhGDgaEqeeA4HA',
-          instagram: 'https://www.instagram.com/thegrefg',
-          twitter: 'https://www.instagram.com/thegrefg',
-          twitch: 'https://www.twitch.tv/thegrefg',
-          tiktok: 'https://www.tiktok.com/@thegrefg'
-        }
-      },
-      { 
-        nombre: 'Tomás Mazza', 
-        foto: './assets/img/peleadores/tomasmazza/tomasmazza1.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/tomasmazza/tomasmazza2.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.76,
-          peso: 84,
-          alcance: 179,
-          edad: 25,
-          combates: 1
+        { 
+          nombre: 'Ari Geli', 
+          foto: './assets/img/peleadores/arigeli/arigeli2.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/arigeli/arigeli1.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.58,
+            peso: 53,
+            alcance: 161,
+            edad: 22,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@AriGeli',
+            instagram: 'https://www.instagram.com/arigelii/',
+            tiktok: 'https://www.tiktok.com/@arigeli'
+          }
         },
-        redes: {
-          kick: 'https://kick.com/mazzatomas',
-          instagram: 'https://www.instagram.com/mazzatomas/',
-          twitter: 'https://x.com/MazzaTomas',
-          tiktok: 'https://www.tiktok.com/@mazzatomas'
-        }
-      },
-      { 
-        nombre: 'Ari Geli', 
-        foto: './assets/img/peleadores/arigeli/arigeli2.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/arigeli/arigeli1.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.58,
-          peso: 53,
-          alcance: 161,
-          edad: 22,
-          combates: 1
+        { 
+          nombre: 'Carlos Belcast', 
+          foto: './assets/img/peleadores/carlosbelcast/carlosbelcast2.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/carlosbelcast/carlosbelcast1.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.78,
+            peso: 90,
+            alcance: 180,
+            edad: 26,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@carlosbelcast',
+            instagram: 'https://www.instagram.com/carlosbelcast/',
+            tiktok: 'https://www.tiktok.com/@carlosbelcast'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@AriGeli',
-          instagram: 'https://www.instagram.com/arigelii/',
-          tiktok: 'https://www.tiktok.com/@arigeli'
-        }
-      },
-      { 
-        nombre: 'Carlos Belcast', 
-        foto: './assets/img/peleadores/carlosbelcast/carlosbelcast2.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/carlosbelcast/carlosbelcast1.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.78,
-          peso: 90,
-          alcance: 180,
-          edad: 26,
-          combates: 1
+        { 
+          nombre: 'Andoni', 
+          foto: './assets/img/peleadores/andoni/andoni2.webp',
+          edicion: 5,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/andoni/andoni1.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.87,
+            peso: 115,
+            alcance: 190,
+            edad: 22,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/AndoniFitness',
+            instagram: 'https://www.instagram.com/andonifitness',
+            tiktok: 'https://www.tiktok.com/@andoonig'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@carlosbelcast',
-          instagram: 'https://www.instagram.com/carlosbelcast/',
-          tiktok: 'https://www.tiktok.com/@carlosbelcast'
-        }
-      },
-      { 
-        nombre: 'Andoni', 
-        foto: './assets/img/peleadores/andoni/andoni2.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/andoni/andoni1.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.87,
-          peso: 115,
-          alcance: 190,
-          edad: 22,
-          combates: 1
+        { 
+          nombre: 'RoRo', 
+          foto: './assets/img/peleadores/roro/roro2.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/roro/roro1.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.49,
+            peso: 47,
+            alcance: 151,
+            edad: 23,
+            combates: 1
+          },
+          redes: {
+            instagram: 'https://www.instagram.com/whoisroro',
+            tiktok: 'https://www.tiktok.com/@roro.bueno'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/AndoniFitness',
-          instagram: 'https://www.instagram.com/andonifitness',
-          tiktok: 'https://www.tiktok.com/@andoonig'
-        }
-      },
-      { 
-        nombre: 'RoRo', 
-        foto: './assets/img/peleadores/roro/roro2.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/roro/roro1.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.49,
-          peso: 47,
-          alcance: 151,
-          edad: 23,
-          combates: 1
+        { 
+          nombre: 'Abby', 
+          foto: './assets/img/peleadores/abby/abby1.webp',
+          edicion: 5,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/abby/abby2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.72,
+            peso: 62,
+            alcance: 175,
+            edad: 24,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCiPfIy9vhKZH3v2YJBxeB_Q',
+            instagram: 'https://www.instagram.com/abbyimu/',
+            tiktok: 'https://www.tiktok.com/@abbyimu'
+          }
         },
-        redes: {
-          instagram: 'https://www.instagram.com/whoisroro',
-          tiktok: 'https://www.tiktok.com/@roro.bueno'
-        }
-      },
-      { 
-        nombre: 'Abby', 
-        foto: './assets/img/peleadores/abby/abby1.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/abby/abby2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.72,
-          peso: 62,
-          alcance: 175,
-          edad: 24,
-          combates: 1
+        { 
+          nombre: 'Gaspi', 
+          foto: './assets/img/peleadores/gaspi/gaspi1.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/gaspi/gaspi2.webp',
+            pais: 'Argentina',
+            paisBandera: './assets/img/banderas/argentina.webp',
+            altura: 1.83,
+            peso: 112,
+            alcance: 186,
+            edad: 23,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@GaspiPD',
+            instagram: ' https://www.instagram.com/gaspipd',
+            twitter: 'https://x.com/gaspipd'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCiPfIy9vhKZH3v2YJBxeB_Q',
-          instagram: 'https://www.instagram.com/abbyimu/',
-          tiktok: 'https://www.tiktok.com/@abbyimu'
-        }
-      },
-      { 
-        nombre: 'Gaspi', 
-        foto: './assets/img/peleadores/gaspi/gaspi1.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/gaspi/gaspi2.webp',
-          pais: 'Argentina',
-          paisBandera: './assets/img/banderas/argentina.webp',
-          altura: 1.83,
-          peso: 112,
-          alcance: 186,
-          edad: 23,
-          combates: 1
+        { 
+          nombre: 'Perxitaa', 
+          foto: './assets/img/peleadores/perxitaa/perxitaa1.webp',
+          edicion: 5,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/perxitaa/perxitaa2.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.86,
+            peso: 100,
+            alcance: 189,
+            edad: 34,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/user/perxitaa',
+            instagram: 'https://www.instagram.com/perxitaa',
+            twitter: 'https://x.com/perxitaa',
+            twitch: 'https://www.twitch.tv/perxitaa',
+            tiktok: 'https://www.tiktok.com/@srperxitaa'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/@GaspiPD',
-          instagram: ' https://www.instagram.com/gaspipd',
-          twitter: 'https://x.com/gaspipd'
-        }
-      },
-      { 
-        nombre: 'Perxitaa', 
-        foto: './assets/img/peleadores/perxitaa/perxitaa1.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/perxitaa/perxitaa2.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.86,
-          peso: 100,
-          alcance: 189,
-          edad: 34,
-          combates: 1
+        { 
+          nombre: 'Rivaldios', 
+          foto: './assets/img/peleadores/rivaldios/rivaldios1.webp',
+          edicion: 5,
+          totalCinturones: 0,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/rivaldios/rivaldios2.webp',
+            pais: 'México',
+            paisBandera: './assets/img/banderas/mexico.webp',
+            altura: 1.70,
+            peso: 69,
+            alcance: 174,
+            edad: 24,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/@Rivaldios-lacabra',
+            instagram: 'https://www.instagram.com/rivaldios10',
+            tiktok: 'https://www.tiktok.com/@rivaldios10'
+          }
         },
-        redes: {
-          youtube: 'https://www.youtube.com/user/perxitaa',
-          instagram: 'https://www.instagram.com/perxitaa',
-          twitter: 'https://x.com/perxitaa',
-          twitch: 'https://www.twitch.tv/perxitaa',
-          tiktok: 'https://www.tiktok.com/@srperxitaa'
+        { 
+          nombre: 'Peereira7', 
+          foto: './assets/img/peleadores/peereira/peereira.webp',
+          edicion: 5,
+          totalCinturones: 1,
+          peleadorModal: {
+            fotoModal: './assets/img/peleadores/peereira/peereira.webp',
+            pais: 'España',
+            paisBandera: './assets/img/banderas/espanha.webp',
+            altura: 1.63,
+            peso: 63,
+            alcance: 166,
+            edad: 27,
+            combates: 1
+          },
+          redes: {
+            youtube: 'https://www.youtube.com/channel/UCOBtOqxsioUI-fFykO2I4BQ',
+            instagram: 'https://www.instagram.com/peereira7/',
+            twitter: 'https://x.com/peereira7',
+            twitch: 'https://www.twitch.tv/peereira7',
+            tiktok: 'https://www.tiktok.com/@peereira7'
+          }
         }
-      },
-      { 
-        nombre: 'Rivaldios', 
-        foto: './assets/img/peleadores/rivaldios/rivaldios1.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/rivaldios/rivaldios2.webp',
-          pais: 'México',
-          paisBandera: './assets/img/banderas/mexico.webp',
-          altura: 1.70,
-          peso: 69,
-          alcance: 174,
-          edad: 24,
-          combates: 1
-        },
-        redes: {
-          youtube: 'https://www.youtube.com/@Rivaldios-lacabra',
-          instagram: 'https://www.instagram.com/rivaldios10',
-          tiktok: 'https://www.tiktok.com/@rivaldios10'
-        }
-      },
-      { 
-        nombre: 'Peereira7', 
-        foto: './assets/img/peleadores/peereira/peereira.webp',
-        edicion: 5,
-        totalCinturones: 0,
-        peleadorModal: {
-          fotoModal: './assets/img/peleadores/peereira/peereira.webp',
-          pais: 'España',
-          paisBandera: './assets/img/banderas/espanha.webp',
-          altura: 1.63,
-          peso: 63,
-          alcance: 166,
-          edad: 27,
-          combates: 1
-        },
-        redes: {
-          youtube: 'https://www.youtube.com/channel/UCOBtOqxsioUI-fFykO2I4BQ',
-          instagram: 'https://www.instagram.com/peereira7/',
-          twitter: 'https://x.com/peereira7',
-          twitch: 'https://www.twitch.tv/peereira7',
-          tiktok: 'https://www.tiktok.com/@peereira7'
-        }
-      }
     ];
     // Contenedor principal donde se agregará todo
     const contenedorPeleadores = document.getElementById('peleadoresContainer')
@@ -1411,9 +1413,12 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- MODAL -->
           <div class="modal fade" id="modalPeleador${index}" tabindex="-1" aria-labelledby="modalLabel${index}" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
+
               <div class="modal-content">
                 <div id="peleadorModal" class="modal-body peleadores-modal-body ${obtenerClaseEdicion(peleador.edicion)} container d-flex flex-column">
                   
+                  <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+
                   <div class="modal-item d-flex justify-content-center">
                     <h4>${peleador.nombre}</h4>
                   </div>
@@ -1508,32 +1513,32 @@ document.addEventListener('DOMContentLoaded', () => {
         velada: './assets/img/la-velada-del-anho-v.webp',
         combatePrincipal: {
           enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/pelea-principal.webp',
-          ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
+          ganador: './assets/img/peleadores/grefg/grefg2.webp'
         },
         combates: [
           {
             enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/rivaldios-peereira.webp',
-            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
-          },
-          {
-            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/gaspi-perxitaa.webp',
-            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
-          },
-          {
-            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/roro-abby.webp',
-            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
-          },
-          {
-            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/belcast-andoni.webp',
-            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
+            ganador: './assets/img/peleadores/peereira/peereira.webp'
           },
           {
             enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/geli-alana.webp',
-            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
+            ganador: './assets/img/peleadores/alana/alana2.webp'
+          },
+          {
+            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/gaspi-perxitaa.webp',
+            ganador: './assets/img/peleadores/perxitaa/perxitaa2.webp'
+          },
+          {
+            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/roro-abby.webp',
+            ganador: './assets/img/peleadores/abby/abby1.webp'
+          },
+          {
+            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/belcast-andoni.webp',
+            ganador: './assets/img/peleadores/andoni/andoni1.webp'
           },
           {
             enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-v/mazza-viruzz.webp',
-            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-v/no-definido.webp'
+            ganador: './assets/img/peleadores/viruzz/viruzz.webp'
           }
         ]
       },
@@ -1562,10 +1567,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ganador: './assets/img/peleadores/viruzz/viruzz.webp'
           },
           {
-          enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-iv/rey-pista.webp',
-          ganador: './assets/img/enfrentamientos/enfrentamientos-velada-iv/reyes.webp'
-        }
-      ]
+            enfrentamiento: './assets/img/enfrentamientos/enfrentamientos-velada-iv/rey-pista.webp',
+            ganador: './assets/img/enfrentamientos/enfrentamientos-velada-iv/reyes.webp'
+          }
+        ]
       },
       // VELADA III
       {
@@ -1654,7 +1659,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tabItem.classList.add('tab-item')
       if (index === 0) tabItem.classList.add('enfrentamiento-active'); // Uso del condicional if simple
       tabItem.innerHTML = `
-        <img src="${combate.velada}" alt="">
+        <img src="${combate.velada}" alt="Logo Velada del Año">
       `;
       tabContainer.appendChild(tabItem)
 
@@ -1731,7 +1736,11 @@ document.addEventListener('DOMContentLoaded', () => {
   //========================*SECCION*=**=CAMPEONES*===============================
     const campeonesListado = [
       /*VELADA 5*/
-        // { nombreCampeon: '', imagenCampeon: './assets/img/', edicionCampeon: 5 },
+        { nombreCampeon: '', imagenCampeon: './assets/img/peleadores/grefg/grefg2.webp', edicionCampeon: 5 },
+        { nombreCampeon: '', imagenCampeon: './assets/img/peleadores/andoni/andoni2.webp', edicionCampeon: 5 },
+        { nombreCampeon: '', imagenCampeon: './assets/img/peleadores/abby/abby1.webp', edicionCampeon: 5 },
+        { nombreCampeon: '', imagenCampeon: './assets/img/peleadores/perxitaa/perxitaa1.webp', edicionCampeon: 5 },
+        { nombreCampeon: '', imagenCampeon: './assets/img/peleadores/peereira/peereira.webp', edicionCampeon: 5 },
       /*VELADA 4*/
         { nombreCampeon: 'YoSoyPlex', imagenCampeon: './assets/img/peleadores/yosoyplex/yosoyplex.webp', edicionCampeon: 4 },
         { nombreCampeon: 'Karchez', imagenCampeon: './assets/img/peleadores/karchez/karchez2.webp', edicionCampeon: 4 },
